@@ -2,7 +2,7 @@ pipeline:
   run_first:
     image: alpine
     commands: 
-      - echo "master"s
+      - echo "master"
   run_second: 
     image: alpine
     commands: 
@@ -15,4 +15,3 @@ pipeline:
       - echo "testbranch"
     when:
       branch: testbranch
-branches: master
