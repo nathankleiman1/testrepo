@@ -2,12 +2,17 @@ pipeline:
   run_first:
     image: alpine
     commands: 
-      - echo "Test1"
-      - exit 1
+      - echo "master"s
   run_second: 
     image: alpine
     commands: 
       - echo "failed"
     when:
       status: failure
+  other_branch: 
+    image: alpine
+    commands: 
+      - echo "testbranch"
+    when:
+      branch: testbranch
 branches: master
