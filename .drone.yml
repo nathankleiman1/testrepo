@@ -1,0 +1,6 @@
+pipeline:  
+  run_command:
+    image: alpine
+    commands: 
+      - echo "Test1"
+      
