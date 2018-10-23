@@ -1,0 +1,13 @@
+pipeline:  
+  run_first:
+    image: alpine
+    commands: 
+      - echo "Test1"
+      - exit 1
+  run_second: 
+    image: alpine
+    commands: 
+      - echo "failed"
+    when:
+      status: failure
+branches: master
